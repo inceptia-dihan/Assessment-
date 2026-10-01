@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courses - ByteSpace | Find Your Next Course</title>
+  <meta name="description" content="Explore hundreds of courses in Design, Development, Business, Marketing, and more on ByteSpace." />
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="search-page-body">
+  <!-- Search Top Blue Area (Navbar + Hero) -->
+  <div class="search-header-hero-wrapper">
+    <!-- Header / Navigation -->
+    <header class="navbar" id="main-navbar">
+      <div class="nav-container">
+        <!-- Brand Logo -->
+        <a href="index.html" class="brand-logo" id="brand-logo">
+          <svg class="logo-icon" width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 7C4 4.79086 5.79086 3 8 3H16L12 16L4 7Z" fill="#C8F902" />
+            <path d="M12 16L26 16C26 23.732 19.732 30 12 30H8C5.79086 30 4 28.2091 4 26L12 16Z" fill="#C8F902" />
+          </svg>
+          <span class="logo-text">ByteSpace</span>
+        </a>
+
+        <!-- Center Links -->
+        <nav class="nav-links" id="nav-links">
+          <a href="index.html" class="nav-link" id="nav-home">Home</a>
+          <a href="search.html" class="nav-link active" id="nav-courses">Courses</a>
+          <a href="index.html#creator-cta-section" class="nav-link" id="nav-creators">Creators</a>
+        </nav>
+
+        <!-- Right Action Items -->
+        <div class="nav-actions" id="nav-actions">
+          <a href="login.html" class="action-link" id="nav-signin">Sign In</a>
+          <a href="register.html" class="action-link" id="nav-join">Join Us</a>
+          <button class="cart-btn" id="nav-cart" aria-label="Shopping Cart">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Search Hero Section -->
+    <section class="search-hero-section" id="search-hero-section">
+      <div class="search-hero-container">
+        <h1 class="search-hero-title" id="search-hero-title">Find Your Next Course</h1>
+
+        <!-- Search Input Box & Dropdown Button -->
+        <form class="search-bar-wrap" id="search-bar-form" action="search.html" method="GET" onsubmit="event.preventDefault();">
+          <div class="search-input-box">
+            <svg class="search-bar-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="course-search-input" placeholder="Search" autocomplete="off" />
+          </div>
+
+          <div class="dropdown-container">
+            <button class="search-category-dropdown-btn" id="search-category-dropdown-btn" type="button" aria-expanded="false">
+              <span id="selected-category-text">Courses</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="custom-dropdown-menu" id="courses-dropdown-menu">
+              <button type="button" class="dropdown-item active" data-category="all">All Courses</button>
+              <button type="button" class="dropdown-item" data-category="uiux">UI/UX Design</button>
+              <button type="button" class="dropdown-item" data-category="marketing">Marketing</button>
+              <button type="button" class="dropdown-item" data-category="bigdata">Big Data</button>
+              <button type="button" class="dropdown-item" data-category="productivity">Productivity</button>
+              <button type="button" class="dropdown-item" data-category="finance">Finance</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <!-- Filters & Sorting Section -->
+  <section class="search-filters-section" id="search-filters-section">
+    <div class="search-filters-container">
+      <!-- Filter Controls Row -->
+      <div class="filters-action-row">
+        <div class="filters-left-group">
+          <!-- Filter Button -->
+          <button class="filter-pill-btn" id="filter-btn" type="button">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="4" y1="21" x2="4" y2="14"></line>
+              <line x1="4" y1="10" x2="4" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12" y2="3"></line>
+              <line x1="20" y1="21" x2="20" y2="16"></line>
+              <line x1="20" y1="12" x2="20" y2="3"></line>
+              <line x1="1" y1="14" x2="7" y2="14"></line>
+              <line x1="9" y1="8" x2="15" y2="8"></line>
+              <line x1="17" y1="16" x2="23" y2="16"></line>
+            </svg>
+            <span>Filter</span>
+          </button>
+
+          <!-- Level Dropdown Button -->
+          <div class="dropdown-container">
+            <button class="filter-pill-btn" id="level-btn" type="button" aria-expanded="false">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+                <line x1="12" y1="20" x2="12" y2="9"></line>
+              </svg>
+              <span id="level-btn-text">Level</span>
+              <svg class="chevron-mini" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="custom-dropdown-menu" id="level-dropdown-menu">
+              <button type="button" class="dropdown-item active" data-level="all">All Levels</button>
+              <button type="button" class="dropdown-item" data-level="beginner">Beginner</button>
+              <button type="button" class="dropdown-item" data-level="intermediate">Intermediate</button>
+              <button type="button" class="dropdown-item" data-level="advanced">Advanced</button>
+            </div>
+          </div>
+
+          <!-- Category Dropdown Button -->
+          <div class="dropdown-container">
+            <button class="filter-pill-btn" id="category-btn" type="button" aria-expanded="false">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+              <span id="category-btn-text">Category</span>
+              <svg class="chevron-mini" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="custom-dropdown-menu" id="category-dropdown-menu">
+              <button type="button" class="dropdown-item active" data-cat="all">All Categories</button>
+              <button type="button" class="dropdown-item" data-cat="uiux">UI/UX Design</button>
+              <button type="button" class="dropdown-item" data-cat="marketing">Marketing</button>
+              <button type="button" class="dropdown-item" data-cat="bigdata">Big Data</button>
+              <button type="button" class="dropdown-item" data-cat="finance">Finance</button>
+              <button type="button" class="dropdown-item" data-cat="productivity">Productivity</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Sort Dropdown -->
+        <div class="filters-right-group">
+          <div class="dropdown-container">
+            <button class="filter-pill-btn sort-btn" id="sort-btn" type="button" aria-expanded="false">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="21" y1="10" x2="3" y2="10"></line>
+                <line x1="21" y1="6" x2="3" y2="6"></line>
+                <line x1="21" y1="14" x2="3" y2="14"></line>
+                <line x1="21" y1="18" x2="3" y2="18"></line>
+              </svg>
+              <span id="sort-btn-text">Most relevant</span>
+              <svg class="chevron-mini" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="custom-dropdown-menu" id="sort-dropdown-menu">
+              <button type="button" class="dropdown-item active" data-sort="relevant">Most relevant</button>
+              <button type="button" class="dropdown-item" data-sort="rating">Highest rated</button>
+              <button type="button" class="dropdown-item" data-sort="price-low">Price: Low to High</button>
+              <button type="button" class="dropdown-item" data-sort="price-high">Price: High to Low</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category Filter Tags Row -->
+      <div class="search-category-tags-row" id="search-category-tags-row">
+        <button class="search-tag-pill active" data-tag="all">Featured</button>
+        <button class="search-tag-pill" data-tag="music">Music</button>
+        <button class="search-tag-pill" data-tag="drawing">Drawing &amp; Painting</button>
+        <button class="search-tag-pill" data-tag="marketing">Marketing</button>
+        <button class="search-tag-pill" data-tag="animation">Animation</button>
+        <button class="search-tag-pill" data-tag="social-media">Social Media</button>
+        <button class="search-tag-pill" data-tag="uiux">UI/UX Design</button>
+        <button class="search-tag-pill" data-tag="creative-marketing">Creative Marketing</button>
+        <button class="search-tag-pill" data-tag="cooking">Cooking</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses Grid Results (18 Cards) -->
+  <section class="search-results-section" id="search-results-section">
+    <div class="search-results-container">
+      <div class="search-courses-grid" id="search-courses-grid">
+        
+        <!-- ROW 1 -->
+        <!-- Card 1: Figma -->
+        <div class="course-card">
+          <div class="course-thumb-box">
+            <img src="images/course-wireframe-brainstorming-full.jpg" alt="Learn Figma from Basic" class="course-thumb-img" />
+            <div class="thumb-badge-row">
+              <span class="course-badge-pill">17 Lessons</span>
+              <span class="course-badge-pill">2 hours 16 mins</span>
+            </div>
+          </div>
+          <div class="course-info-box">
+            <div class="course-title-rating-row">
+              <h3 class="course-title">Learn Figma from Basic</h3>
+              <div class="course-rating">
+                <span class="rating-val">4.5</span>
+                <span class="rating-star">★</span>
+              </div>
+            </div>
+            <p class="course-instructor">by purepearl studio</p>
+            <div class="course-meta-row">
+              <span class="level-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M4 18h2v-4H4v4zm5 0h2v-8H9v8zm5 0h2V6h-2v12zm5 0h2V2h-2v16z"/>
+                </svg>
+                Beginner
+              </span>
+              <div class="instructor-avatar-stack">
+                <img src="images/avatar-1-man-glasses.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-2-bearded-man.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-3-smiling-woman.png" alt="Avatar" class="avatar-sm" />
+                <div class="avatar-sm-badge">2K+</div>
+              </div>
+            </div>
+            <div class="course-price-row">
+              <span class="price-val">$25</span><span class="price-type">/lifetime</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Digital Asset -->
+        <div class="course-card">
+          <div class="course-thumb-box">
+            <img src="images/course-ui-icons-full.jpg" alt="Build Digital Asset" class="course-thumb-img" />
+            <div class="thumb-badge-row">
+              <span class="course-badge-pill">17 Lessons</span>
+              <span class="course-badge-pill">2 hours 16 mins</span>
+            </div>
+          </div>
+          <div class="course-info-box">
+            <div class="course-title-rating-row">
+              <h3 class="course-title">Build Digital Asset</h3>
+              <div class="course-rating">
+                <span class="rating-val">4.5</span>
+                <span class="rating-star">★</span>
+              </div>
+            </div>
+            <p class="course-instructor">by purepearl studio</p>
+            <div class="course-meta-row">
+              <span class="level-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M4 18h2v-4H4v4zm5 0h2v-8H9v8zm5 0h2V6h-2v12zm5 0h2V2h-2v16z"/>
+                </svg>
+                Beginner
+              </span>
+              <div class="instructor-avatar-stack">
+                <img src="images/avatar-1-man-glasses.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-2-bearded-man.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-3-smiling-woman.png" alt="Avatar" class="avatar-sm" />
+                <div class="avatar-sm-badge">2K+</div>
+              </div>
+            </div>
+            <div class="course-price-row">
+              <span class="price-val">$25</span><span class="price-type">/lifetime</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Big Data -->
+        <div class="course-card">
+          <div class="course-thumb-box">
+            <img src="images/course-analytics-dashboard-full.jpg" alt="the Power of Big Data" class="course-thumb-img" />
+            <div class="thumb-badge-row">
+              <span class="course-badge-pill">17 Lessons</span>
+              <span class="course-badge-pill">2 hours 16 mins</span>
+            </div>
+          </div>
+          <div class="course-info-box">
+            <div class="course-title-rating-row">
+              <h3 class="course-title">the Power of Big Data</h3>
+              <div class="course-rating">
+                <span class="rating-val">4.5</span>
+                <span class="rating-star">★</span>
+              </div>
+            </div>
+            <p class="course-instructor">by purepearl studio</p>
+            <div class="course-meta-row">
+              <span class="level-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M4 18h2v-4H4v4zm5 0h2v-8H9v8zm5 0h2V6h-2v12zm5 0h2V2h-2v16z"/>
+                </svg>
+                Beginner
+              </span>
+              <div class="instructor-avatar-stack">
+                <img src="images/avatar-1-man-glasses.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-2-bearded-man.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-3-smiling-woman.png" alt="Avatar" class="avatar-sm" />
+                <div class="avatar-sm-badge">2K+</div>
+              </div>
+            </div>
+            <div class="course-price-row">
+              <span class="price-val">$25</span><span class="price-type">/lifetime</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 2 -->
+        <!-- Card 4: Balancing Productivity -->
+        <div class="course-card">
+          <div class="course-thumb-box">
+            <img src="images/course-imac-domore-full.jpg" alt="Balancing Productivity and Creativity" class="course-thumb-img" />
+            <div class="thumb-badge-row">
+              <span class="course-badge-pill">17 Lessons</span>
+              <span class="course-badge-pill">2 hours 16 mins</span>
+            </div>
+          </div>
+          <div class="course-info-box">
+            <div class="course-title-rating-row">
+              <h3 class="course-title">Balancing Productivity an...</h3>
+              <div class="course-rating">
+                <span class="rating-val">4.5</span>
+                <span class="rating-star">★</span>
+              </div>
+            </div>
+            <p class="course-instructor">by purepearl studio</p>
+            <div class="course-meta-row">
+              <span class="level-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M4 18h2v-4H4v4zm5 0h2v-8H9v8zm5 0h2V6h-2v12zm5 0h2V2h-2v16z"/>
+                </svg>
+                Beginner
+              </span>
+              <div class="instructor-avatar-stack">
+                <img src="images/avatar-1-man-glasses.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-2-bearded-man.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-3-smiling-woman.png" alt="Avatar" class="avatar-sm" />
+                <div class="avatar-sm-badge">2K+</div>
+              </div>
+            </div>
+            <div class="course-price-row">
+              <span class="price-val">$25</span><span class="price-type">/lifetime</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: Money Management -->
+        <div class="course-card">
+          <div class="course-thumb-box">
+            <img src="images/course-stock-chart-full.jpg" alt="Mastering Money Management" class="course-thumb-img" />
+            <div class="thumb-badge-row">
+              <span class="course-badge-pill">17 Lessons</span>
+              <span class="course-badge-pill">2 hours 16 mins</span>
+            </div>
+          </div>
+          <div class="course-info-box">
+            <div class="course-title-rating-row">
+              <h3 class="course-title">Mastering Money Manage...</h3>
+              <div class="course-rating">
+                <span class="rating-val">4.5</span>
+                <span class="rating-star">★</span>
+              </div>
+            </div>
+            <p class="course-instructor">by purepearl studio</p>
+            <div class="course-meta-row">
+              <span class="level-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M4 18h2v-4H4v4zm5 0h2v-8H9v8zm5 0h2V6h-2v12zm5 0h2V2h-2v16z"/>
+                </svg>
+                Beginner
+              </span>
+              <div class="instructor-avatar-stack">
+                <img src="images/avatar-1-man-glasses.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-2-bearded-man.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-3-smiling-woman.png" alt="Avatar" class="avatar-sm" />
+                <div class="avatar-sm-badge">2K+</div>
+              </div>
+            </div>
+            <div class="course-price-row">
+              <span class="price-val">$25</span><span class="price-type">/lifetime</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6: Startup Success -->
+        <div class="course-card">
+          <div class="course-thumb-box">
+            <img src="images/workshop-meeting-full.jpg" alt="From Idea to Startup Success" class="course-thumb-img" />
+            <div class="thumb-badge-row">
+              <span class="course-badge-pill">17 Lessons</span>
+              <span class="course-badge-pill">2 hours 16 mins</span>
+            </div>
+          </div>
+          <div class="course-info-box">
+            <div class="course-title-rating-row">
+              <h3 class="course-title">From Idea to Startup Suce...</h3>
+              <div class="course-rating">
+                <span class="rating-val">4.5</span>
+                <span class="rating-star">★</span>
+              </div>
+            </div>
+            <p class="course-instructor">by purepearl studio</p>
+            <div class="course-meta-row">
+              <span class="level-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M4 18h2v-4H4v4zm5 0h2v-8H9v8zm5 0h2V6h-2v12zm5 0h2V2h-2v16z"/>
+                </svg>
+                Beginner
+              </span>
+              <div class="instructor-avatar-stack">
+                <img src="images/avatar-1-man-glasses.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-2-bearded-man.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-3-smiling-woman.png" alt="Avatar" class="avatar-sm" />
+                <div class="avatar-sm-badge">2K+</div>
+              </div>
+            </div>
+            <div class="course-price-row">
+              <span class="price-val">$25</span><span class="price-type">/lifetime</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 3 (Repeating Set 2) -->
+        <div class="course-card">
+          <div class="course-thumb-box">
+            <img src="images/course-wireframe-brainstorming-full.jpg" alt="Learn Figma from Basic" class="course-thumb-img" />
+            <div class="thumb-badge-row">
+              <span class="course-badge-pill">17 Lessons</span>
+              <span class="course-badge-pill">2 hours 16 mins</span>
+            </div>
+          </div>
+          <div class="course-info-box">
+            <div class="course-title-rating-row">
+              <h3 class="course-title">Learn Figma from Basic</h3>
+              <div class="course-rating">
+                <span class="rating-val">4.5</span>
+                <span class="rating-star">★</span>
+              </div>
+            </div>
+            <p class="course-instructor">by purepearl studio</p>
+            <div class="course-meta-row">
+              <span class="level-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M4 18h2v-4H4v4zm5 0h2v-8H9v8zm5 0h2V6h-2v12zm5 0h2V2h-2v16z"/>
+                </svg>
+                Beginner
+              </span>
+              <div class="instructor-avatar-stack">
+                <img src="images/avatar-1-man-glasses.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-2-bearded-man.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-3-smiling-woman.png" alt="Avatar" class="avatar-sm" />
+                <div class="avatar-sm-badge">2K+</div>
+              </div>
+            </div>
+            <div class="course-price-row">
+              <span class="price-val">$25</span><span class="price-type">/lifetime</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-thumb-box">
+            <img src="images/course-ui-icons-full.jpg" alt="Build Digital Asset" class="course-thumb-img" />
+            <div class="thumb-badge-row">
+              <span class="course-badge-pill">17 Lessons</span>
+              <span class="course-badge-pill">2 hours 16 mins</span>
+            </div>
+          </div>
+          <div class="course-info-box">
+            <div class="course-title-rating-row">
+              <h3 class="course-title">Build Digital Asset</h3>
+              <div class="course-rating">
+                <span class="rating-val">4.5</span>
+                <span class="rating-star">★</span>
+              </div>
+            </div>
+            <p class="course-instructor">by purepearl studio</p>
+            <div class="course-meta-row">
+              <span class="level-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M4 18h2v-4H4v4zm5 0h2v-8H9v8zm5 0h2V6h-2v12zm5 0h2V2h-2v16z"/>
+                </svg>
+                Beginner
+              </span>
+              <div class="instructor-avatar-stack">
+                <img src="images/avatar-1-man-glasses.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-2-bearded-man.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-3-smiling-woman.png" alt="Avatar" class="avatar-sm" />
+                <div class="avatar-sm-badge">2K+</div>
+              </div>
+            </div>
+            <div class="course-price-row">
+              <span class="price-val">$25</span><span class="price-type">/lifetime</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-thumb-box">
+            <img src="images/course-analytics-dashboard-full.jpg" alt="the Power of Big Data" class="course-thumb-img" />
+            <div class="thumb-badge-row">
+              <span class="course-badge-pill">17 Lessons</span>
+              <span class="course-badge-pill">2 hours 16 mins</span>
+            </div>
+          </div>
+          <div class="course-info-box">
+            <div class="course-title-rating-row">
+              <h3 class="course-title">the Power of Big Data</h3>
+              <div class="course-rating">
+                <span class="rating-val">4.5</span>
+                <span class="rating-star">★</span>
+              </div>
+            </div>
+            <p class="course-instructor">by purepearl studio</p>
+            <div class="course-meta-row">
+              <span class="level-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M4 18h2v-4H4v4zm5 0h2v-8H9v8zm5 0h2V6h-2v12zm5 0h2V2h-2v16z"/>
+                </svg>
+                Beginner
+              </span>
+              <div class="instructor-avatar-stack">
+                <img src="images/avatar-1-man-glasses.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-2-bearded-man.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-3-smiling-woman.png" alt="Avatar" class="avatar-sm" />
+                <div class="avatar-sm-badge">2K+</div>
+              </div>
+            </div>
+            <div class="course-price-row">
+              <span class="price-val">$25</span><span class="price-type">/lifetime</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 4 -->
+        <div class="course-card">
+          <div class="course-thumb-box">
+            <img src="images/course-imac-domore-full.jpg" alt="Balancing Productivity and Creativity" class="course-thumb-img" />
+            <div class="thumb-badge-row">
+              <span class="course-badge-pill">17 Lessons</span>
+              <span class="course-badge-pill">2 hours 16 mins</span>
+            </div>
+          </div>
+          <div class="course-info-box">
+            <div class="course-title-rating-row">
+              <h3 class="course-title">Balancing Productivity an...</h3>
+              <div class="course-rating">
+                <span class="rating-val">4.5</span>
+                <span class="rating-star">★</span>
+              </div>
+            </div>
+            <p class="course-instructor">by purepearl studio</p>
+            <div class="course-meta-row">
+              <span class="level-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M4 18h2v-4H4v4zm5 0h2v-8H9v8zm5 0h2V6h-2v12zm5 0h2V2h-2v16z"/>
+                </svg>
+                Beginner
+              </span>
+              <div class="instructor-avatar-stack">
+                <img src="images/avatar-1-man-glasses.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-2-bearded-man.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-3-smiling-woman.png" alt="Avatar" class="avatar-sm" />
+                <div class="avatar-sm-badge">2K+</div>
+              </div>
+            </div>
+            <div class="course-price-row">
+              <span class="price-val">$25</span><span class="price-type">/lifetime</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-thumb-box">
+            <img src="images/course-stock-chart-full.jpg" alt="Mastering Money Management" class="course-thumb-img" />
+            <div class="thumb-badge-row">
+              <span class="course-badge-pill">17 Lessons</span>
+              <span class="course-badge-pill">2 hours 16 mins</span>
+            </div>
+          </div>
+          <div class="course-info-box">
+            <div class="course-title-rating-row">
+              <h3 class="course-title">Mastering Money Manage...</h3>
+              <div class="course-rating">
+                <span class="rating-val">4.5</span>
+                <span class="rating-star">★</span>
+              </div>
+            </div>
+            <p class="course-instructor">by purepearl studio</p>
+            <div class="course-meta-row">
+              <span class="level-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M4 18h2v-4H4v4zm5 0h2v-8H9v8zm5 0h2V6h-2v12zm5 0h2V2h-2v16z"/>
+                </svg>
+                Beginner
+              </span>
+              <div class="instructor-avatar-stack">
+                <img src="images/avatar-1-man-glasses.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-2-bearded-man.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-3-smiling-woman.png" alt="Avatar" class="avatar-sm" />
+                <div class="avatar-sm-badge">2K+</div>
+              </div>
+            </div>
+            <div class="course-price-row">
+              <span class="price-val">$25</span><span class="price-type">/lifetime</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-thumb-box">
+            <img src="images/workshop-meeting-full.jpg" alt="From Idea to Startup Success" class="course-thumb-img" />
+            <div class="thumb-badge-row">
+              <span class="course-badge-pill">17 Lessons</span>
+              <span class="course-badge-pill">2 hours 16 mins</span>
+            </div>
+          </div>
+          <div class="course-info-box">
+            <div class="course-title-rating-row">
+              <h3 class="course-title">From Idea to Startup Suce...</h3>
+              <div class="course-rating">
+                <span class="rating-val">4.5</span>
+                <span class="rating-star">★</span>
+              </div>
+            </div>
+            <p class="course-instructor">by purepearl studio</p>
+            <div class="course-meta-row">
+              <span class="level-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M4 18h2v-4H4v4zm5 0h2v-8H9v8zm5 0h2V6h-2v12zm5 0h2V2h-2v16z"/>
+                </svg>
+                Beginner
+              </span>
+              <div class="instructor-avatar-stack">
+                <img src="images/avatar-1-man-glasses.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-2-bearded-man.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-3-smiling-woman.png" alt="Avatar" class="avatar-sm" />
+                <div class="avatar-sm-badge">2K+</div>
+              </div>
+            </div>
+            <div class="course-price-row">
+              <span class="price-val">$25</span><span class="price-type">/lifetime</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 5 (Repeating Set 3) -->
+        <div class="course-card">
+          <div class="course-thumb-box">
+            <img src="images/course-wireframe-brainstorming-full.jpg" alt="Learn Figma from Basic" class="course-thumb-img" />
+            <div class="thumb-badge-row">
+              <span class="course-badge-pill">17 Lessons</span>
+              <span class="course-badge-pill">2 hours 16 mins</span>
+            </div>
+          </div>
+          <div class="course-info-box">
+            <div class="course-title-rating-row">
+              <h3 class="course-title">Learn Figma from Basic</h3>
+              <div class="course-rating">
+                <span class="rating-val">4.5</span>
+                <span class="rating-star">★</span>
+              </div>
+            </div>
+            <p class="course-instructor">by purepearl studio</p>
+            <div class="course-meta-row">
+              <span class="level-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M4 18h2v-4H4v4zm5 0h2v-8H9v8zm5 0h2V6h-2v12zm5 0h2V2h-2v16z"/>
+                </svg>
+                Beginner
+              </span>
+              <div class="instructor-avatar-stack">
+                <img src="images/avatar-1-man-glasses.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-2-bearded-man.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-3-smiling-woman.png" alt="Avatar" class="avatar-sm" />
+                <div class="avatar-sm-badge">2K+</div>
+              </div>
+            </div>
+            <div class="course-price-row">
+              <span class="price-val">$25</span><span class="price-type">/lifetime</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-thumb-box">
+            <img src="images/course-ui-icons-full.jpg" alt="Build Digital Asset" class="course-thumb-img" />
+            <div class="thumb-badge-row">
+              <span class="course-badge-pill">17 Lessons</span>
+              <span class="course-badge-pill">2 hours 16 mins</span>
+            </div>
+          </div>
+          <div class="course-info-box">
+            <div class="course-title-rating-row">
+              <h3 class="course-title">Build Digital Asset</h3>
+              <div class="course-rating">
+                <span class="rating-val">4.5</span>
+                <span class="rating-star">★</span>
+              </div>
+            </div>
+            <p class="course-instructor">by purepearl studio</p>
+            <div class="course-meta-row">
+              <span class="level-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M4 18h2v-4H4v4zm5 0h2v-8H9v8zm5 0h2V6h-2v12zm5 0h2V2h-2v16z"/>
+                </svg>
+                Beginner
+              </span>
+              <div class="instructor-avatar-stack">
+                <img src="images/avatar-1-man-glasses.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-2-bearded-man.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-3-smiling-woman.png" alt="Avatar" class="avatar-sm" />
+                <div class="avatar-sm-badge">2K+</div>
+              </div>
+            </div>
+            <div class="course-price-row">
+              <span class="price-val">$25</span><span class="price-type">/lifetime</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-thumb-box">
+            <img src="images/course-analytics-dashboard-full.jpg" alt="the Power of Big Data" class="course-thumb-img" />
+            <div class="thumb-badge-row">
+              <span class="course-badge-pill">17 Lessons</span>
+              <span class="course-badge-pill">2 hours 16 mins</span>
+            </div>
+          </div>
+          <div class="course-info-box">
+            <div class="course-title-rating-row">
+              <h3 class="course-title">the Power of Big Data</h3>
+              <div class="course-rating">
+                <span class="rating-val">4.5</span>
+                <span class="rating-star">★</span>
+              </div>
+            </div>
+            <p class="course-instructor">by purepearl studio</p>
+            <div class="course-meta-row">
+              <span class="level-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M4 18h2v-4H4v4zm5 0h2v-8H9v8zm5 0h2V6h-2v12zm5 0h2V2h-2v16z"/>
+                </svg>
+                Beginner
+              </span>
+              <div class="instructor-avatar-stack">
+                <img src="images/avatar-1-man-glasses.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-2-bearded-man.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-3-smiling-woman.png" alt="Avatar" class="avatar-sm" />
+                <div class="avatar-sm-badge">2K+</div>
+              </div>
+            </div>
+            <div class="course-price-row">
+              <span class="price-val">$25</span><span class="price-type">/lifetime</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 6 -->
+        <div class="course-card">
+          <div class="course-thumb-box">
+            <img src="images/course-imac-domore-full.jpg" alt="Balancing Productivity and Creativity" class="course-thumb-img" />
+            <div class="thumb-badge-row">
+              <span class="course-badge-pill">17 Lessons</span>
+              <span class="course-badge-pill">2 hours 16 mins</span>
+            </div>
+          </div>
+          <div class="course-info-box">
+            <div class="course-title-rating-row">
+              <h3 class="course-title">Balancing Productivity an...</h3>
+              <div class="course-rating">
+                <span class="rating-val">4.5</span>
+                <span class="rating-star">★</span>
+              </div>
+            </div>
+            <p class="course-instructor">by purepearl studio</p>
+            <div class="course-meta-row">
+              <span class="level-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M4 18h2v-4H4v4zm5 0h2v-8H9v8zm5 0h2V6h-2v12zm5 0h2V2h-2v16z"/>
+                </svg>
+                Beginner
+              </span>
+              <div class="instructor-avatar-stack">
+                <img src="images/avatar-1-man-glasses.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-2-bearded-man.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-3-smiling-woman.png" alt="Avatar" class="avatar-sm" />
+                <div class="avatar-sm-badge">2K+</div>
+              </div>
+            </div>
+            <div class="course-price-row">
+              <span class="price-val">$25</span><span class="price-type">/lifetime</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-thumb-box">
+            <img src="images/course-stock-chart-full.jpg" alt="Mastering Money Management" class="course-thumb-img" />
+            <div class="thumb-badge-row">
+              <span class="course-badge-pill">17 Lessons</span>
+              <span class="course-badge-pill">2 hours 16 mins</span>
+            </div>
+          </div>
+          <div class="course-info-box">
+            <div class="course-title-rating-row">
+              <h3 class="course-title">Mastering Money Manage...</h3>
+              <div class="course-rating">
+                <span class="rating-val">4.5</span>
+                <span class="rating-star">★</span>
+              </div>
+            </div>
+            <p class="course-instructor">by purepearl studio</p>
+            <div class="course-meta-row">
+              <span class="level-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M4 18h2v-4H4v4zm5 0h2v-8H9v8zm5 0h2V6h-2v12zm5 0h2V2h-2v16z"/>
+                </svg>
+                Beginner
+              </span>
+              <div class="instructor-avatar-stack">
+                <img src="images/avatar-1-man-glasses.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-2-bearded-man.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-3-smiling-woman.png" alt="Avatar" class="avatar-sm" />
+                <div class="avatar-sm-badge">2K+</div>
+              </div>
+            </div>
+            <div class="course-price-row">
+              <span class="price-val">$25</span><span class="price-type">/lifetime</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-thumb-box">
+            <img src="images/workshop-meeting-full.jpg" alt="From Idea to Startup Success" class="course-thumb-img" />
+            <div class="thumb-badge-row">
+              <span class="course-badge-pill">17 Lessons</span>
+              <span class="course-badge-pill">2 hours 16 mins</span>
+            </div>
+          </div>
+          <div class="course-info-box">
+            <div class="course-title-rating-row">
+              <h3 class="course-title">From Idea to Startup Suce...</h3>
+              <div class="course-rating">
+                <span class="rating-val">4.5</span>
+                <span class="rating-star">★</span>
+              </div>
+            </div>
+            <p class="course-instructor">by purepearl studio</p>
+            <div class="course-meta-row">
+              <span class="level-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M4 18h2v-4H4v4zm5 0h2v-8H9v8zm5 0h2V6h-2v12zm5 0h2V2h-2v16z"/>
+                </svg>
+                Beginner
+              </span>
+              <div class="instructor-avatar-stack">
+                <img src="images/avatar-1-man-glasses.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-2-bearded-man.png" alt="Avatar" class="avatar-sm" />
+                <img src="images/avatar-3-smiling-woman.png" alt="Avatar" class="avatar-sm" />
+                <div class="avatar-sm-badge">2K+</div>
+              </div>
+            </div>
+            <div class="course-price-row">
+              <span class="price-val">$25</span><span class="price-type">/lifetime</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pagination Row -->
+      <div class="search-pagination" id="search-pagination">
+        <button class="pagination-arrow prev-page" aria-label="Previous page">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+
+        <div class="pagination-numbers">
+          <button class="page-number active">1</button>
+          <button class="page-number">2</button>
+          <button class="page-number">3</button>
+          <button class="page-number">4</button>
+          <button class="page-number">5</button>
+        </div>
+
+        <button class="pagination-arrow next-page" aria-label="Next page">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" id="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <!-- Left: Newsletter & Brand Info -->
+        <div class="footer-newsletter-col">
+          <a href="index.html" class="footer-brand" id="footer-brand">
+            <svg class="footer-logo-icon" width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 7C4 4.79086 5.79086 3 8 3H16L12 16L4 7Z" fill="#C8F902" />
+              <path d="M12 16L26 16C26 23.732 19.732 30 12 30H8C5.79086 30 4 28.2091 4 26L12 16Z" fill="#C8F902" />
+            </svg>
+            <span class="footer-brand-text">ByteSpace</span>
+          </a>
+
+          <p class="footer-tagline">
+            Stay Up to date with our latest features and releases by joining our newsletter.
+          </p>
+
+          <form class="footer-newsletter-form" id="footer-newsletter-form" onsubmit="event.preventDefault();">
+            <input type="email" placeholder="Enter your email" class="newsletter-input" id="newsletter-input" required />
+            <button type="submit" class="newsletter-btn" id="newsletter-btn">Search</button>
+          </form>
+
+          <p class="footer-disclaimer">
+            By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.
+          </p>
+        </div>
+
+        <!-- Right: 3 Nav Link Columns -->
+        <div class="footer-nav-cols">
+          <!-- Col 1 -->
+          <div class="footer-nav-col">
+            <ul class="footer-links">
+              <li><a href="#featured-courses" class="footer-link">Featured Courses</a></li>
+              <li><a href="#featured-categories" class="footer-link">Featured Categories</a></li>
+              <li><a href="#business" class="footer-link">Business</a></li>
+              <li><a href="#it" class="footer-link">IT</a></li>
+              <li><a href="#design" class="footer-link">Design</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 2 -->
+          <div class="footer-nav-col">
+            <ul class="footer-links">
+              <li><a href="#development" class="footer-link">Development</a></li>
+              <li><a href="#marketing" class="footer-link">Marketing</a></li>
+              <li><a href="#photography" class="footer-link">Photography</a></li>
+              <li><a href="#finance" class="footer-link">Finance</a></li>
+              <li><a href="#sport" class="footer-link">Sport</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3 -->
+          <div class="footer-nav-col">
+            <ul class="footer-links">
+              <li><a href="#become-creator" class="footer-link">Become a Creator</a></li>
+              <li><a href="#affiliate" class="footer-link">Affiliate Program</a></li>
+              <li><a href="#contact" class="footer-link">Contact</a></li>
+              <li><a href="#help" class="footer-link">Help</a></li>
+              <li><a href="#about" class="footer-link">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <hr class="footer-divider" />
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p class="footer-copyright">@ 2023 ByteSpace. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="#privacy" class="footer-legal-link">Privacy Policy</a>
+          <a href="#terms" class="footer-legal-link">Terms of Service</a>
+          <a href="#cookies" class="footer-legal-link">Cookies Settings</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

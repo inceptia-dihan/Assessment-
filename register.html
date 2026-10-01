@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up | ByteSpace</title>
+  <meta name="description" content="Create a ByteSpace account to start learning and discovering creative courses today." />
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="auth-page-body">
+
+  <!-- Top Logo Mark Bar -->
+  <header class="auth-top-bar">
+    <div class="auth-nav-container">
+      <a href="index.html" class="auth-brand-logo" id="auth-brand-logo" aria-label="ByteSpace Home">
+        <svg class="auth-logo-icon" width="28" height="30" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M1 4.5L5.5 1H8V8.2C9.5 7.4 11.2 7 13 7C16.866 7 20 10.134 20 14C20 17.866 16.866 21 13 21H6C3.23858 21 1 18.7614 1 16V4.5ZM8 11.5V16.5L12.5 14L8 11.5Z" fill="#C8F902"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Auth Wrapper -->
+  <main class="auth-main-wrapper">
+    <div class="auth-container">
+      
+      <!-- Left Column: Copy & Floating Showcase -->
+      <section class="auth-left-col">
+        <div class="auth-intro-header">
+          <h1 class="auth-heading">Sign up and come in</h1>
+          <p class="auth-subheading">
+            The registration process is straightforward, uncomplicated,<br class="desktop-br" />
+            and efficient, allowing users to sign up quickly, easily, and at<br class="desktop-br" />
+            no cost
+          </p>
+        </div>
+
+        <div class="auth-visual-wrapper">
+          <img 
+            src="images/auth-showcase-visual.png" 
+            alt="ByteSpace Courses & Happy Students Showcase" 
+            class="auth-showcase-image" 
+            id="auth-showcase-image"
+          />
+        </div>
+      </section>
+
+      <!-- Right Column: White Floating Card -->
+      <section class="auth-right-col">
+        <div class="auth-card auth-card-register" id="auth-card">
+          <span class="auth-card-badge">Create an Account</span>
+          <h2 class="auth-card-heading">Welcome to<br />ByteSpace</h2>
+
+          <form class="auth-form" id="auth-register-form" onsubmit="event.preventDefault(); handleAuthSubmit('register');">
+            <div class="auth-form-group">
+              <label for="reg-fullname" class="auth-field-label">Full Name</label>
+              <input 
+                type="text" 
+                id="reg-fullname" 
+                name="fullname" 
+                class="auth-text-input" 
+                placeholder="Jamie Davis" 
+                required 
+              />
+            </div>
+
+            <div class="auth-form-group">
+              <label for="reg-email" class="auth-field-label">Email</label>
+              <input 
+                type="email" 
+                id="reg-email" 
+                name="email" 
+                class="auth-text-input" 
+                placeholder="designer@example.com" 
+                required 
+              />
+            </div>
+
+            <div class="auth-form-group">
+              <label for="reg-password" class="auth-field-label">Password</label>
+              <input 
+                type="password" 
+                id="reg-password" 
+                name="password" 
+                class="auth-text-input" 
+                placeholder="********" 
+                required 
+              />
+            </div>
+
+            <div class="auth-submit-row">
+              <button type="submit" class="auth-action-btn" id="auth-continue-btn">
+                Continue
+              </button>
+            </div>
+          </form>
+
+          <div class="auth-footer-prompt auth-footer-register">
+            <span class="auth-footer-note">Already have an account?</span>
+            <a href="login.html" class="auth-switch-link" id="goto-login-link">Login</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Interactive Toast Notification -->
+  <div class="toast-notification" id="toast-notification"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Page Not Found | ByteSpace</title>
+  <meta name="description" content="The page you are looking for doesn’t exist. Try to use a correct url or go back to homepage to start again." />
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="error-page-body">
+
+  <!-- Top Blue Blueprint Grid Wrapper (Navbar + 404 Hero) -->
+  <div class="error-header-hero-wrapper">
+    <!-- Header / Navigation Bar -->
+    <header class="navbar" id="main-navbar">
+      <div class="nav-container">
+        <!-- Brand Logo -->
+        <a href="index.html" class="brand-logo" id="brand-logo">
+          <svg class="logo-icon" width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 7C4 4.79086 5.79086 3 8 3H16L12 16L4 7Z" fill="#C8F902" />
+            <path d="M12 16L26 16C26 23.732 19.732 30 12 30H8C5.79086 30 4 28.2091 4 26L12 16Z" fill="#C8F902" />
+          </svg>
+          <span class="logo-text">ByteSpace</span>
+        </a>
+
+        <!-- Center Links -->
+        <nav class="nav-links" id="nav-links">
+          <a href="index.html" class="nav-link" id="nav-home">Home</a>
+          <a href="search.html" class="nav-link" id="nav-courses">Courses</a>
+          <a href="creator-profile.html" class="nav-link" id="nav-creators">Creators</a>
+        </nav>
+
+        <!-- Right Action Items -->
+        <div class="nav-actions" id="nav-actions">
+          <a href="login.html" class="action-link" id="nav-signin">Sign In</a>
+          <a href="register.html" class="action-link" id="nav-join">Join Us</a>
+          <button class="cart-btn" id="nav-cart" aria-label="Shopping Cart">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- 404 Hero Section -->
+    <main class="error-hero-section" id="error-hero-section">
+      <div class="error-hero-container">
+
+        <!-- Giant 404 + Overlay Headline Graphic Area -->
+        <div class="error-graphic-wrapper">
+          <div class="error-giant-svg-wrap">
+            <svg class="error-404-svg" viewBox="0 0 344 108" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="404" role="img">
+              <defs>
+                <linearGradient id="lime404Grad" x1="172" y1="0" x2="172" y2="108" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#C8F902" />
+                  <stop offset="28%" stop-color="#B2F214" />
+                  <stop offset="65%" stop-color="#55BE8A" stop-opacity="0.68" />
+                  <stop offset="100%" stop-color="#146ED7" stop-opacity="0.22" />
+                </linearGradient>
+              </defs>
+              <!-- First '4' -->
+              <path d="M64 0H90V83H108V105H90V108H65V105H0V83L64 0ZM65 18L25 83H65V18Z" fill="url(#lime404Grad)" fill-rule="evenodd" clip-rule="evenodd" />
+              <!-- '0' -->
+              <path d="M121 38C121 17 143.4 0 171 0C198.6 0 221 17 221 38V70C221 91 198.6 108 171 108C143.4 108 121 91 121 70V38ZM147 44C147 33 157.7 24 171 24C184.3 24 195 33 195 44V64C195 75 184.3 84 171 84C157.7 84 147 75 147 64V44Z" fill="url(#lime404Grad)" fill-rule="evenodd" clip-rule="evenodd" />
+              <!-- Second '4' -->
+              <path d="M300 0H326V83H344V105H326V108H301V105H236V83L300 0ZM301 18L261 83H301V18Z" fill="url(#lime404Grad)" fill-rule="evenodd" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <div class="error-headline-group">
+            <h1 class="error-main-title">
+              The page you are looking<br />for doesn’t exist
+            </h1>
+          </div>
+        </div>
+
+        <!-- Explanatory Subtitle -->
+        <p class="error-subtitle">
+          Try to use a correct url or go back to homepage to start again
+        </p>
+
+        <!-- Back to Home Action Button -->
+        <div class="error-action-row">
+          <a href="index.html" class="error-home-btn" id="error-home-btn">
+            Back to Home
+          </a>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toast-notification"></div>
+
+  <!-- Site Footer (Exact Match) -->
+  <footer class="site-footer" id="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <!-- Left: Newsletter & Brand Info -->
+        <div class="footer-newsletter-col">
+          <a href="index.html" class="footer-brand" id="footer-brand">
+            <svg class="footer-logo-icon" width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 7C4 4.79086 5.79086 3 8 3H16L12 16L4 7Z" fill="#C8F902" />
+              <path d="M12 16L26 16C26 23.732 19.732 30 12 30H8C5.79086 30 4 28.2091 4 26L12 16Z" fill="#C8F902" />
+            </svg>
+            <span class="footer-brand-text">ByteSpace</span>
+          </a>
+
+          <p class="footer-tagline">
+            Stay Up to date with our latest features and releases by joining our newsletter.
+          </p>
+
+          <form class="footer-newsletter-form" id="footer-newsletter-form" onsubmit="event.preventDefault();">
+            <input type="email" placeholder="Enter your email" class="newsletter-input" id="newsletter-input" required />
+            <button type="submit" class="newsletter-btn" id="newsletter-btn">Search</button>
+          </form>
+
+          <p class="footer-disclaimer">
+            By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.
+          </p>
+        </div>
+
+        <!-- Right: 3 Nav Link Columns -->
+        <div class="footer-nav-cols">
+          <!-- Col 1 -->
+          <div class="footer-nav-col">
+            <ul class="footer-links">
+              <li><a href="search.html" class="footer-link">Featured Courses</a></li>
+              <li><a href="search.html" class="footer-link">Featured Categories</a></li>
+              <li><a href="search.html" class="footer-link">Business</a></li>
+              <li><a href="search.html" class="footer-link">IT</a></li>
+              <li><a href="search.html" class="footer-link">Design</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 2 -->
+          <div class="footer-nav-col">
+            <ul class="footer-links">
+              <li><a href="search.html" class="footer-link">Development</a></li>
+              <li><a href="search.html" class="footer-link">Marketing</a></li>
+              <li><a href="search.html" class="footer-link">Photography</a></li>
+              <li><a href="search.html" class="footer-link">Finance</a></li>
+              <li><a href="search.html" class="footer-link">Sport</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3 -->
+          <div class="footer-nav-col">
+            <ul class="footer-links">
+              <li><a href="index.html#creator-cta-section" class="footer-link">Become a Creator</a></li>
+              <li><a href="#affiliate" class="footer-link">Affiliate Program</a></li>
+              <li><a href="#contact" class="footer-link">Contact</a></li>
+              <li><a href="#help" class="footer-link">Help</a></li>
+              <li><a href="#about" class="footer-link">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <hr class="footer-divider" />
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p class="footer-copyright">@ 2023 ByteSpace. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="#privacy" class="footer-legal-link">Privacy Policy</a>
+          <a href="#terms" class="footer-legal-link">Terms of Service</a>
+          <a href="#cookies" class="footer-legal-link">Cookies Settings</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

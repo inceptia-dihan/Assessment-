@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ByteSpace - Get Access to Hundreds Courses Available</title>
+  <meta name="description" content="Unlock your creativity, gain valuable knowledge, and grow your business with our wide range of courses on ByteSpace." />
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="navbar" id="main-navbar">
+    <div class="nav-container">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo" id="brand-logo">
+        <svg class="logo-icon" width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 7C4 4.79086 5.79086 3 8 3H16L12 16L4 7Z" fill="#C8F902" />
+          <path d="M12 16L26 16C26 23.732 19.732 30 12 30H8C5.79086 30 4 28.2091 4 26L12 16Z" fill="#C8F902" />
+        </svg>
+        <span class="logo-text">ByteSpace</span>
+      </a>
+
+      <!-- Center Links -->
+      <nav class="nav-links" id="nav-links">
+        <a href="#home" class="nav-link active" id="nav-home">Home</a>
+        <a href="search.html" class="nav-link" id="nav-courses">Courses</a>
+        <a href="#creator-cta-section" class="nav-link" id="nav-creators">Creators</a>
+      </nav>
+
+      <!-- Right Action Items -->
+      <div class="nav-actions" id="nav-actions">
+        <a href="login.html" class="action-link" id="nav-signin">Sign In</a>
+        <a href="register.html" class="action-link" id="nav-join">Join Us</a>
+        <button class="cart-btn" id="nav-cart" aria-label="Shopping Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="hero-section" id="hero-section">
+    <!-- 3D Floating Shapes Background Layer -->
+    <div class="floating-shapes-container" aria-hidden="true">
+      <img src="images/shape-spiral-green.png" alt="3D Green Spiral" class="shape shape-spiral" id="shape-spiral" />
+      <img src="images/shape-squiggle-left.png" alt="3D White Squiggle Left" class="shape shape-squiggle-l" id="shape-squiggle-l" />
+      <img src="images/shape-torus-left.png" alt="3D White Torus Ring" class="shape shape-torus" id="shape-torus" />
+      <img src="images/shape-cylinder-green.png" alt="3D Green Cylinder" class="shape shape-cylinder" id="shape-cylinder" />
+      <img src="images/shape-pyramid-right.png" alt="3D White Pyramid" class="shape shape-pyramid" id="shape-pyramid" />
+      <img src="images/shape-squiggle-right.png" alt="3D White Squiggle Right" class="shape shape-squiggle-r" id="shape-squiggle-r" />
+    </div>
+
+    <div class="hero-content-wrapper">
+      <!-- Headlines -->
+      <h1 class="hero-title" id="hero-title">
+        Get Access to Hundreds<br>Courses Available
+      </h1>
+
+      <p class="hero-description" id="hero-description">
+        Unlock your creativity, gain valuable knowledge, and grow your business with our wide range of courses.
+      </p>
+
+      <!-- Search Bar -->
+      <form class="hero-search-box" id="hero-search-box" action="search.html" method="GET">
+        <div class="search-input-group">
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="search-input" name="q" placeholder="Course, topic, creator" autocomplete="off" />
+        </div>
+        <button type="submit" class="search-btn" id="search-btn">Search</button>
+      </form>
+
+      <!-- Central Visual Composition (Student + Green Dome + Floating Cards) -->
+      <div class="hero-visual-area" id="hero-visual-area">
+        <!-- Floating Card 1: UI/UX Design -->
+        <div class="floating-stat-card card-uiux" id="stat-card-uiux">
+          <span class="card-main-title">UI/UX Design</span>
+          <span class="card-sub-info">200 Courses &bull; 1000+ Students</span>
+        </div>
+
+        <!-- Floating Card 2: Learning Progress -->
+        <div class="floating-stat-card card-progress" id="stat-card-progress">
+          <span class="card-label-small">Learning Progress</span>
+          <span class="card-percentage">55%</span>
+          <div class="progress-bar-track">
+            <div class="progress-bar-fill" id="progress-bar-fill"></div>
+          </div>
+        </div>
+
+        <!-- Floating Card 3: Happy Students -->
+        <div class="floating-stat-card card-students" id="stat-card-students">
+          <div class="card-students-top">
+            <span class="students-label">Happy Students</span>
+            <div class="students-rating-box">
+              <span class="rating-num">4.5</span>
+              <span class="rating-reviews">(240)</span>
+              <span class="rating-star">★</span>
+            </div>
+          </div>
+          <div class="students-avatar-row">
+            <img src="images/avatar-1-man-glasses.png" alt="Student avatar 1" class="student-avatar" />
+            <img src="images/avatar-2-bearded-man.png" alt="Student avatar 2" class="student-avatar" />
+            <img src="images/avatar-3-smiling-woman.png" alt="Student avatar 3" class="student-avatar" />
+            <img src="images/image-5-instructor-portrait.jpg" alt="Student avatar 4" class="student-avatar" />
+            <img src="images/creator-purepearl-avatar.png" alt="Student avatar 5" class="student-avatar" />
+            <div class="avatar-badge-pill">2K+</div>
+          </div>
+        </div>
+
+        <!-- Central Character & Green Arch -->
+        <div class="hero-student-frame">
+          <div class="green-arch-backdrop"></div>
+          <img src="images/hero-male-student-laptop-transparent.png" alt="Student holding laptop with headset" class="student-img" id="student-img" />
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Partner Logos Banner -->
+  <section class="partners-bar" id="partners-bar">
+    <div class="partners-container">
+      <!-- Logo 1: Wave Ribbon -->
+      <div class="partner-item">
+        <svg class="partner-icon" width="32" height="26" viewBox="0 0 32 26" fill="currentColor">
+          <path d="M0 4C5 1 11 8 16 4C21 1 27 8 32 4V8C27 12 21 5 16 8C11 12 5 5 0 8V4Z" />
+          <path d="M0 12C5 9 11 16 16 12C21 9 27 16 32 12V16C27 20 21 13 16 16C11 20 5 13 0 16V12Z" />
+          <path d="M0 20C5 17 11 24 16 20C21 17 27 24 32 20V24C27 28 21 21 16 24C11 28 5 21 0 24V20Z" />
+        </svg>
+        <span class="partner-name">Logoipsum</span>
+      </div>
+
+      <!-- Logo 2: Sunburst Rays -->
+      <div class="partner-item">
+        <svg class="partner-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor">
+          <circle cx="14" cy="14" r="4.5" fill="currentColor" stroke="none" />
+          <path d="M14 2V5.5M14 22.5V26M2 14H5.5M22.5 14H26M5.5 5.5L8 8M20 20L22.5 22.5M5.5 22.5L8 20M20 8L22.5 5.5" stroke-width="2.5" stroke-linecap="round" />
+        </svg>
+        <span class="partner-name">Logoipsum</span>
+      </div>
+
+      <!-- Logo 3: Lightning Bolt Circle -->
+      <div class="partner-item">
+        <svg class="partner-icon" width="28" height="28" viewBox="0 0 28 28" fill="currentColor">
+          <circle cx="14" cy="14" r="13" />
+          <path d="M15 5L8 15H14L13 23L20 13H14L15 5Z" fill="#F4F5F7" />
+        </svg>
+        <span class="partner-name">Logoipsum</span>
+      </div>
+
+      <!-- Logo 4: Quad Circles Flower -->
+      <div class="partner-item">
+        <svg class="partner-icon" width="28" height="28" viewBox="0 0 28 28" fill="currentColor">
+          <circle cx="14" cy="14" r="13" fill="none" stroke="currentColor" stroke-width="2.2" />
+          <circle cx="14" cy="7.5" r="2.8" />
+          <circle cx="14" cy="20.5" r="2.8" />
+          <circle cx="7.5" cy="14" r="2.8" />
+          <circle cx="20.5" cy="14" r="2.8" />
+          <circle cx="14" cy="14" r="2.2" />
+        </svg>
+        <span class="partner-name">Logoipsum</span>
+      </div>
+
+      <!-- Logo 5: Concentric Rings / Fingerprint -->
+      <div class="partner-item">
+        <svg class="partner-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8">
+          <circle cx="14" cy="14" r="13" />
+          <circle cx="14" cy="14" r="10" />
+          <circle cx="14" cy="14" r="7" />
+          <circle cx="14" cy="14" r="4" />
+          <circle cx="14" cy="14" r="1.5" fill="currentColor" />
+        </svg>
+        <span class="partner-name">Logoipsum</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories & Skill Building Section -->
+  <section class="categories-section" id="categories-section">
+    <div class="categories-container">
+      <div class="categories-header">
+        <h2 class="categories-title" id="categories-title">
+          Discover Your Passion,<br>Build Your Skills
+        </h2>
+        <p class="categories-subtitle" id="categories-subtitle">
+          At Bytespace Courses, we bring you closer to life-changing knowledge. Explore a variety of courses across different fields, from technology to the arts, and make a difference in your career and life.
+        </p>
+      </div>
+
+      <!-- Category Tags / Filter Pills (3 Rows) -->
+      <div class="category-pills-wrap" id="category-pills-wrap">
+        <!-- Row 1 -->
+        <div class="category-row" id="category-row-1">
+          <button class="category-pill active" data-category="featured">Featured</button>
+          <button class="category-pill" data-category="music">Music</button>
+          <button class="category-pill" data-category="drawing">Drawing & Painting</button>
+          <button class="category-pill" data-category="marketing">Marketing</button>
+          <button class="category-pill" data-category="animation">Animation</button>
+          <button class="category-pill" data-category="social-media">Social Media</button>
+          <button class="category-pill" data-category="uiux">UI/UX Design</button>
+          <button class="category-pill" data-category="creative-marketing">Creative Marketing</button>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="category-row" id="category-row-2">
+          <button class="category-pill" data-category="digital-illustration">Digital Illustration</button>
+          <button class="category-pill" data-category="film-video">Film & Video</button>
+          <button class="category-pill" data-category="crafts">Crafts</button>
+          <button class="category-pill" data-category="freelance">Freelance & Entrepreneurship</button>
+          <button class="category-pill" data-category="graphic-design">Graphic Design</button>
+          <button class="category-pill" data-category="photography">Photography</button>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="category-row" id="category-row-3">
+          <button class="category-pill" data-category="productivity">Productivity</button>
+          <button class="category-pill" data-category="web-dev">Web Development</button>
+          <button class="category-pill" data-category="data-science">Data Science</button>
+          <button class="category-pill" data-category="cooking">Cooking</button>
+          <button class="category-pill more-link" id="more-categories-btn">+ More</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses Grid Section -->
+  <section class="courses-grid-section" id="courses-grid-section">
+    <div class="courses-grid-container">
+      <!-- Card 1: Learn Figma from Basic -->
+      <article class="course-card" id="course-card-1">
+        <div class="card-img-wrap">
+          <a href="course-details.html">
+            <img src="images/course-wireframe-brainstorming-full.jpg" alt="Learn Figma from Basic" class="course-thumbnail" />
+          </a>
+        </div>
+        <div class="card-body">
+          <div class="card-title-row">
+            <h3 class="course-title"><a href="course-details.html">Learn Figma from Basic</a></h3>
+            <div class="course-rating">
+              <span class="rating-score">4.5</span>
+              <span class="rating-star-icon">★</span>
+            </div>
+          </div>
+          <div class="course-instructor">
+            <span class="by-text">by</span> <a href="course-details.html#creator-section" class="instructor-name">purepearl studio</a>
+          </div>
+          <div class="card-features-row">
+            <div class="level-pill">
+              <svg class="level-bars-icon" width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+                <rect x="1" y="9.5" width="3" height="5.5" rx="0.8"/>
+                <rect x="6.5" y="5.5" width="3" height="9.5" rx="0.8"/>
+                <rect x="12" y="1.5" width="3" height="13.5" rx="0.8"/>
+              </svg>
+              <span>Beginner</span>
+            </div>
+            <div class="students-avatar-group">
+              <img src="images/avatar-2-bearded-man.png" alt="Student 1" class="group-avatar" />
+              <img src="images/avatar-3-smiling-woman.png" alt="Student 2" class="group-avatar" />
+              <img src="images/image-5-instructor-portrait.jpg" alt="Student 3" class="group-avatar" />
+              <img src="images/avatar-1-man-glasses.png" alt="Student 4" class="group-avatar" />
+              <div class="group-badge">26+</div>
+            </div>
+          </div>
+          <div class="card-price-row">
+            <span class="price-val">$25</span><span class="price-type">/lifetime</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2: Build Digital Asset -->
+      <article class="course-card" id="course-card-2">
+        <div class="card-img-wrap">
+          <a href="course-details.html">
+            <img src="images/course-ui-icons-full.jpg" alt="Build Digital Asset" class="course-thumbnail" />
+          </a>
+        </div>
+        <div class="card-body">
+          <div class="card-title-row">
+            <h3 class="course-title"><a href="course-details.html">Build Digital Asset</a></h3>
+            <div class="course-rating">
+              <span class="rating-score">4.5</span>
+              <span class="rating-star-icon">★</span>
+            </div>
+          </div>
+          <div class="course-instructor">
+            <span class="by-text">by</span> <a href="course-details.html#creator-section" class="instructor-name">purepearl studio</a>
+          </div>
+          <div class="card-features-row">
+            <div class="level-pill">
+              <svg class="level-bars-icon" width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+                <rect x="1" y="9.5" width="3" height="5.5" rx="0.8"/>
+                <rect x="6.5" y="5.5" width="3" height="9.5" rx="0.8"/>
+                <rect x="12" y="1.5" width="3" height="13.5" rx="0.8"/>
+              </svg>
+              <span>Beginner</span>
+            </div>
+            <div class="students-avatar-group">
+              <img src="images/avatar-2-bearded-man.png" alt="Student 1" class="group-avatar" />
+              <img src="images/avatar-3-smiling-woman.png" alt="Student 2" class="group-avatar" />
+              <img src="images/image-5-instructor-portrait.jpg" alt="Student 3" class="group-avatar" />
+              <img src="images/avatar-1-man-glasses.png" alt="Student 4" class="group-avatar" />
+              <div class="group-badge">26+</div>
+            </div>
+          </div>
+          <div class="card-price-row">
+            <span class="price-val">$25</span><span class="price-type">/lifetime</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3: the Power of Big Data -->
+      <article class="course-card" id="course-card-3">
+        <div class="card-img-wrap">
+          <a href="course-details.html">
+            <img src="images/course-analytics-dashboard-full.jpg" alt="the Power of Big Data" class="course-thumbnail" />
+          </a>
+        </div>
+        <div class="card-body">
+          <div class="card-title-row">
+            <h3 class="course-title"><a href="course-details.html">the Power of Big Data</a></h3>
+            <div class="course-rating">
+              <span class="rating-score">4.5</span>
+              <span class="rating-star-icon">★</span>
+            </div>
+          </div>
+          <div class="course-instructor">
+            <span class="by-text">by</span> <a href="course-details.html#creator-section" class="instructor-name">purepearl studio</a>
+          </div>
+          <div class="card-features-row">
+            <div class="level-pill">
+              <svg class="level-bars-icon" width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+                <rect x="1" y="9.5" width="3" height="5.5" rx="0.8"/>
+                <rect x="6.5" y="5.5" width="3" height="9.5" rx="0.8"/>
+                <rect x="12" y="1.5" width="3" height="13.5" rx="0.8"/>
+              </svg>
+              <span>Beginner</span>
+            </div>
+            <div class="students-avatar-group">
+              <img src="images/avatar-2-bearded-man.png" alt="Student 1" class="group-avatar" />
+              <img src="images/avatar-3-smiling-woman.png" alt="Student 2" class="group-avatar" />
+              <img src="images/image-5-instructor-portrait.jpg" alt="Student 3" class="group-avatar" />
+              <img src="images/avatar-1-man-glasses.png" alt="Student 4" class="group-avatar" />
+              <div class="group-badge">26+</div>
+            </div>
+          </div>
+          <div class="card-price-row">
+            <span class="price-val">$25</span><span class="price-type">/lifetime</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4: Balancing Productivity an... -->
+      <article class="course-card" id="course-card-4">
+        <div class="card-img-wrap">
+          <a href="course-details.html">
+            <img src="images/course-imac-domore-full.jpg" alt="Balancing Productivity" class="course-thumbnail" />
+          </a>
+        </div>
+        <div class="card-body">
+          <div class="card-title-row">
+            <h3 class="course-title"><a href="course-details.html">Balancing Productivity an...</a></h3>
+            <div class="course-rating">
+              <span class="rating-score">4.5</span>
+              <span class="rating-star-icon">★</span>
+            </div>
+          </div>
+          <div class="course-instructor">
+            <span class="by-text">by</span> <a href="course-details.html#creator-section" class="instructor-name">purepearl studio</a>
+          </div>
+          <div class="card-features-row">
+            <div class="level-pill">
+              <svg class="level-bars-icon" width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+                <rect x="1" y="9.5" width="3" height="5.5" rx="0.8"/>
+                <rect x="6.5" y="5.5" width="3" height="9.5" rx="0.8"/>
+                <rect x="12" y="1.5" width="3" height="13.5" rx="0.8"/>
+              </svg>
+              <span>Beginner</span>
+            </div>
+            <div class="students-avatar-group">
+              <img src="images/avatar-2-bearded-man.png" alt="Student 1" class="group-avatar" />
+              <img src="images/avatar-3-smiling-woman.png" alt="Student 2" class="group-avatar" />
+              <img src="images/image-5-instructor-portrait.jpg" alt="Student 3" class="group-avatar" />
+              <img src="images/avatar-1-man-glasses.png" alt="Student 4" class="group-avatar" />
+              <div class="group-badge">26+</div>
+            </div>
+          </div>
+          <div class="card-price-row">
+            <span class="price-val">$25</span><span class="price-type">/lifetime</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 5: Mastering Money Manage... -->
+      <article class="course-card" id="course-card-5">
+        <div class="card-img-wrap">
+          <a href="course-details.html">
+            <img src="images/course-stock-chart-full.jpg" alt="Mastering Money Management" class="course-thumbnail" />
+          </a>
+        </div>
+        <div class="card-body">
+          <div class="card-title-row">
+            <h3 class="course-title"><a href="course-details.html">Mastering Money Manage...</a></h3>
+            <div class="course-rating">
+              <span class="rating-score">4.5</span>
+              <span class="rating-star-icon">★</span>
+            </div>
+          </div>
+          <div class="course-instructor">
+            <span class="by-text">by</span> <a href="course-details.html#creator-section" class="instructor-name">purepearl studio</a>
+          </div>
+          <div class="card-features-row">
+            <div class="level-pill">
+              <svg class="level-bars-icon" width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+                <rect x="1" y="9.5" width="3" height="5.5" rx="0.8"/>
+                <rect x="6.5" y="5.5" width="3" height="9.5" rx="0.8"/>
+                <rect x="12" y="1.5" width="3" height="13.5" rx="0.8"/>
+              </svg>
+              <span>Beginner</span>
+            </div>
+            <div class="students-avatar-group">
+              <img src="images/avatar-2-bearded-man.png" alt="Student 1" class="group-avatar" />
+              <img src="images/avatar-3-smiling-woman.png" alt="Student 2" class="group-avatar" />
+              <img src="images/image-5-instructor-portrait.jpg" alt="Student 3" class="group-avatar" />
+              <img src="images/avatar-1-man-glasses.png" alt="Student 4" class="group-avatar" />
+              <div class="group-badge">26+</div>
+            </div>
+          </div>
+          <div class="card-price-row">
+            <span class="price-val">$25</span><span class="price-type">/lifetime</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 6: From Idea to Startup Succ... -->
+      <article class="course-card" id="course-card-6">
+        <div class="card-img-wrap">
+          <a href="course-details.html">
+            <img src="images/workshop-meeting-full.jpg" alt="From Idea to Startup Success" class="course-thumbnail" />
+          </a>
+        </div>
+        <div class="card-body">
+          <div class="card-title-row">
+            <h3 class="course-title"><a href="course-details.html">From Idea to Startup Succ...</a></h3>
+            <div class="course-rating">
+              <span class="rating-score">4.5</span>
+              <span class="rating-star-icon">★</span>
+            </div>
+          </div>
+          <div class="course-instructor">
+            <span class="by-text">by</span> <a href="course-details.html#creator-section" class="instructor-name">purepearl studio</a>
+          </div>
+          <div class="card-features-row">
+            <div class="level-pill">
+              <svg class="level-bars-icon" width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+                <rect x="1" y="9.5" width="3" height="5.5" rx="0.8"/>
+                <rect x="6.5" y="5.5" width="3" height="9.5" rx="0.8"/>
+                <rect x="12" y="1.5" width="3" height="13.5" rx="0.8"/>
+              </svg>
+              <span>Beginner</span>
+            </div>
+            <div class="students-avatar-group">
+              <img src="images/avatar-2-bearded-man.png" alt="Student 1" class="group-avatar" />
+              <img src="images/avatar-3-smiling-woman.png" alt="Student 2" class="group-avatar" />
+              <img src="images/image-5-instructor-portrait.jpg" alt="Student 3" class="group-avatar" />
+              <img src="images/avatar-1-man-glasses.png" alt="Student 4" class="group-avatar" />
+              <div class="group-badge">26+</div>
+            </div>
+          </div>
+          <div class="card-price-row">
+            <span class="price-val">$25</span><span class="price-type">/lifetime</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Explore Diverse Learning Paths Section -->
+  <section class="learning-paths-section" id="learning-paths-section">
+    <div class="learning-paths-container">
+      <div class="paths-header">
+        <h2 class="paths-title" id="paths-title">Explore Diverse Learning Paths at Bytespace</h2>
+        <p class="paths-subtitle" id="paths-subtitle">
+          At Bytespace, we believe in empowering individuals through knowledge. Our diverse range of courses spans various fields, ensuring there's something for everyone. Unleash your potential and explore our carefully curated categories.
+        </p>
+      </div>
+
+      <!-- 6 Category Cards Row -->
+      <div class="paths-cards-row" id="paths-cards-row">
+        <!-- 1. Design -->
+        <a href="#design" class="path-card" id="path-design">
+          <div class="path-icon-circle">
+            <svg class="path-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+              <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+              <path d="M2 2l7.586 7.586"/>
+              <circle cx="11" cy="11" r="1.5" fill="currentColor"/>
+            </svg>
+          </div>
+          <span class="path-name">Design</span>
+        </a>
+
+        <!-- 2. Development -->
+        <a href="#development" class="path-card" id="path-development">
+          <div class="path-icon-circle">
+            <svg class="path-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="2" width="14" height="20" rx="3"/>
+              <path d="M9.5 9.5L7.5 12l2 2.5"/>
+              <path d="M14.5 9.5l2 2.5-2 2.5"/>
+            </svg>
+          </div>
+          <span class="path-name">Development</span>
+        </a>
+
+        <!-- 3. IT & Software -->
+        <a href="#it-software" class="path-card" id="path-it-software">
+          <div class="path-icon-circle">
+            <svg class="path-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="5" width="16" height="11" rx="1.5"/>
+              <path d="M2 19h20"/>
+            </svg>
+          </div>
+          <span class="path-name">IT & Software</span>
+        </a>
+
+        <!-- 4. Business -->
+        <a href="#business" class="path-card" id="path-business">
+          <div class="path-icon-circle">
+            <svg class="path-svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3 21h18v-2h-2V3H9v6H5v10H3v2zm8-16h6v14h-6V5zm-4 6h2v8H7v-8z"/>
+              <circle cx="12" cy="7.5" r="1" fill="#C8F902"/>
+              <circle cx="16" cy="7.5" r="1" fill="#C8F902"/>
+              <circle cx="12" cy="11.5" r="1" fill="#C8F902"/>
+              <circle cx="16" cy="11.5" r="1" fill="#C8F902"/>
+              <circle cx="12" cy="15.5" r="1" fill="#C8F902"/>
+              <circle cx="16" cy="15.5" r="1" fill="#C8F902"/>
+            </svg>
+          </div>
+          <span class="path-name">Business</span>
+        </a>
+
+        <!-- 5. Marketing -->
+        <a href="#marketing" class="path-card" id="path-marketing">
+          <div class="path-icon-circle">
+            <svg class="path-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 11l15-5v12L3 13v-2z"/>
+              <path d="M8 15v4a2 2 0 0 0 2 2h0a2 2 0 0 0 2-2v-3"/>
+              <path d="M20 9a4 4 0 0 1 0 6"/>
+              <path d="M22 7a7 7 0 0 1 0 10"/>
+            </svg>
+          </div>
+          <span class="path-name">Marketing</span>
+        </a>
+
+        <!-- 6. Photography -->
+        <a href="#photography" class="path-card" id="path-photography">
+          <div class="path-icon-circle">
+            <svg class="path-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+              <circle cx="12" cy="13" r="4"/>
+            </svg>
+          </div>
+          <span class="path-name">Photography</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Growth Section -->
+  <section class="growth-section" id="growth-section">
+    <div class="growth-container">
+      <!-- Left Column: Content -->
+      <div class="growth-content-col">
+        <h2 class="growth-title" id="growth-title">
+          Your Path to Professional<br>Growth Starts Here!
+        </h2>
+        <p class="growth-description" id="growth-description">
+          Explore our curated selection of courses tailored to enhance your capabilities and accelerate your career journey. Whether you are looking to sharpen specific skills, gain industry expertise, or embark on a new career path entirely, we have the resources you need.
+        </p>
+
+        <!-- Stats Row -->
+        <div class="growth-stats-row" id="growth-stats-row">
+          <div class="growth-stat-item">
+            <span class="growth-stat-number">12K</span>
+            <span class="growth-stat-label">Students</span>
+          </div>
+          <div class="growth-stat-item">
+            <span class="growth-stat-number">70+</span>
+            <span class="growth-stat-label">Courses</span>
+          </div>
+          <div class="growth-stat-item">
+            <span class="growth-stat-number">16</span>
+            <span class="growth-stat-label">Creators</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Visual Composition -->
+      <div class="growth-visual-col" id="growth-visual-col">
+        <div class="growth-visual-wrapper">
+          <img src="images/growth-composite-visual.png" alt="Your Path to Professional Growth - Learn Figma Course Preview" class="growth-composite-img" id="growth-composite-img" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Create & Manage Courses Section -->
+  <section class="manage-section" id="manage-section">
+    <div class="manage-container">
+      <!-- Left Column: Visual Composition -->
+      <div class="manage-visual-col" id="manage-visual-col">
+        <div class="manage-visual-wrapper">
+          <img src="images/creator-manage-visual.png" alt="Create and Manage Courses Easily - ByteSpace Instructor" class="manage-composite-img" id="manage-composite-img" />
+        </div>
+      </div>
+
+      <!-- Right Column: Content -->
+      <div class="manage-content-col" id="manage-content-col">
+        <h2 class="manage-title" id="manage-title">
+          Create &amp; Manage<br>Courses Easily.
+        </h2>
+        <p class="manage-description" id="manage-description">
+          <strong class="brand-text">ByteSpace</strong> supports individuals or entities in the creation, publication, and administration of educational courses.
+        </p>
+
+        <!-- Feature Points List -->
+        <ul class="manage-features-list" id="manage-features-list">
+          <li class="manage-feature-item">
+            <span class="manage-check-icon-wrap">
+              <svg class="manage-check-icon" width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="12" fill="#003CE2"/>
+                <path d="M7 12.5l3.2 3.2 6.8-7.4" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="manage-feature-text">Share Your Expertise</span>
+          </li>
+
+          <li class="manage-feature-item">
+            <span class="manage-check-icon-wrap">
+              <svg class="manage-check-icon" width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="12" fill="#003CE2"/>
+                <path d="M7 12.5l3.2 3.2 6.8-7.4" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="manage-feature-text">Monetize Your Passion</span>
+          </li>
+
+          <li class="manage-feature-item">
+            <span class="manage-check-icon-wrap">
+              <svg class="manage-check-icon" width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="12" fill="#003CE2"/>
+                <path d="M7 12.5l3.2 3.2 6.8-7.4" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="manage-feature-text">Flexibility and Autonomy</span>
+          </li>
+
+          <li class="manage-feature-item">
+            <span class="manage-check-icon-wrap">
+              <svg class="manage-check-icon" width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="12" fill="#003CE2"/>
+                <path d="M7 12.5l3.2 3.2 6.8-7.4" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="manage-feature-text">Build a Community</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Creator CTA Banner Section -->
+  <section class="creator-cta-section" id="creator-cta-section">
+    <!-- 3D Floating Shapes -->
+    <div class="cta-floating-shapes" aria-hidden="true">
+      <img src="images/shape-squiggle-right.png" alt="" class="cta-shape cta-shape-1" />
+      <img src="images/shape-squiggle-left.png" alt="" class="cta-shape cta-shape-2" />
+      <img src="images/shape-pyramid-right.png" alt="" class="cta-shape cta-shape-3" />
+      <img src="images/shape-torus-left.png" alt="" class="cta-shape cta-shape-4" />
+      <img src="images/shape-cylinder-green.png" alt="" class="cta-shape cta-shape-5" />
+      <img src="images/shape-spiral-green.png" alt="" class="cta-shape cta-shape-6" />
+    </div>
+
+    <div class="creator-cta-container">
+      <h2 class="creator-cta-title" id="creator-cta-title">
+        Unlock Your Potential as a<br>Creator with ByteSpace
+      </h2>
+      <p class="creator-cta-desc" id="creator-cta-desc">
+        Experience the collaboration of numerous creators and an expanding selection of courses. Register now and become a part of a community comprising over 10,000 local and international creators. Utilize our Course Editor, and showcase your expertise by publishing your finest course on the ByteSpace Course Library.
+      </p>
+      <a href="#join-creator" class="creator-cta-btn" id="creator-cta-btn">Join as Creator</a>
+    </div>
+  </section>
+
+  <!-- Community Testimonials Section -->
+  <section class="testimonials-section" id="testimonials-section">
+    <div class="testimonials-container">
+      <!-- Header Row: 2 Columns -->
+      <div class="testimonials-header-row">
+        <div class="testimonials-header-col">
+          <h2 class="testimonials-title" id="testimonials-title">
+            Discover What Our<br>Community Is Saying
+          </h2>
+        </div>
+        <div class="testimonials-intro-col">
+          <p class="testimonials-intro-text" id="testimonials-intro-text">
+            At ByteSpace, our vibrant community of learners and creators is at the heart of what we do. Hear directly from those who have experienced the transformative journey of learning and creating on our platform. Explore testimonials that reflect the diverse perspectives of enthusiastic learners and accomplished creators.
+          </p>
+        </div>
+      </div>
+
+      <!-- Testimonial Cards Grid (3 Cards) -->
+      <div class="testimonials-cards-grid" id="testimonials-cards-grid">
+        <!-- Card 1: Sarah M. -->
+        <div class="testimonial-card" id="testimonial-sarah">
+          <div class="testimonial-author-row">
+            <img src="images/avatar-3-smiling-woman.png" alt="Sarah M." class="testimonial-avatar" />
+            <div class="testimonial-author-meta">
+              <h4 class="testimonial-name">Sarah M.</h4>
+              <span class="testimonial-role">Enthusiastic Learner</span>
+            </div>
+          </div>
+          <p class="testimonial-quote">
+            &ldquo;ByteSpace has transformed my approach to learning. The diverse range of courses and the quality of content provided by creators have exceeded my expectations. The platform truly fosters a sense of community and lifelong learning.&rdquo;
+          </p>
+        </div>
+
+        <!-- Card 2: James L. -->
+        <div class="testimonial-card" id="testimonial-james">
+          <div class="testimonial-author-row">
+            <img src="images/avatar-2-bearded-man.png" alt="James L." class="testimonial-avatar" />
+            <div class="testimonial-author-meta">
+              <h4 class="testimonial-name">James L.</h4>
+              <span class="testimonial-role">Lifelong Learner</span>
+            </div>
+          </div>
+          <p class="testimonial-quote">
+            &ldquo;I've tried several online learning platforms, and ByteSpace stands out for its vibrant community and the variety of courses available. The easy navigation and engaging content make it a go-to platform for continuous skill development.&rdquo;
+          </p>
+        </div>
+
+        <!-- Card 3: Alex B. -->
+        <div class="testimonial-card" id="testimonial-alex">
+          <div class="testimonial-author-row">
+            <img src="images/avatar-1-man-glasses.png" alt="Alex B." class="testimonial-avatar" />
+            <div class="testimonial-author-meta">
+              <h4 class="testimonial-name">Alex B.</h4>
+              <span class="testimonial-role">Inspired Creator</span>
+            </div>
+          </div>
+          <p class="testimonial-quote">
+            &ldquo;As a creator, ByteSpace has been a game-changer for me. The Course Editor is user-friendly, and the support from the community is incredible. It's fulfilling to see my courses making a positive impact on learners globally.&rdquo;
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" id="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <!-- Left: Newsletter & Brand Info -->
+        <div class="footer-newsletter-col">
+          <a href="#" class="footer-brand" id="footer-brand">
+            <svg class="footer-logo-icon" width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 7C4 4.79086 5.79086 3 8 3H16L12 16L4 7Z" fill="#C8F902" />
+              <path d="M12 16L26 16C26 23.732 19.732 30 12 30H8C5.79086 30 4 28.2091 4 26L12 16Z" fill="#C8F902" />
+            </svg>
+            <span class="footer-brand-text">ByteSpace</span>
+          </a>
+
+          <p class="footer-tagline">
+            Stay Up to date with our latest features and releases by joining our newsletter.
+          </p>
+
+          <form class="footer-newsletter-form" id="footer-newsletter-form" onsubmit="event.preventDefault();">
+            <input type="email" placeholder="Enter your email" class="newsletter-input" id="newsletter-input" required />
+            <button type="submit" class="newsletter-btn" id="newsletter-btn">Search</button>
+          </form>
+
+          <p class="footer-disclaimer">
+            By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.
+          </p>
+        </div>
+
+        <!-- Right: 3 Nav Link Columns -->
+        <div class="footer-nav-cols">
+          <!-- Col 1 -->
+          <div class="footer-nav-col">
+            <ul class="footer-links">
+              <li><a href="#featured-courses" class="footer-link">Featured Courses</a></li>
+              <li><a href="#featured-categories" class="footer-link">Featured Categories</a></li>
+              <li><a href="#business" class="footer-link">Business</a></li>
+              <li><a href="#it" class="footer-link">IT</a></li>
+              <li><a href="#design" class="footer-link">Design</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 2 -->
+          <div class="footer-nav-col">
+            <ul class="footer-links">
+              <li><a href="#development" class="footer-link">Development</a></li>
+              <li><a href="#marketing" class="footer-link">Marketing</a></li>
+              <li><a href="#photography" class="footer-link">Photography</a></li>
+              <li><a href="#finance" class="footer-link">Finance</a></li>
+              <li><a href="#sport" class="footer-link">Sport</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3 -->
+          <div class="footer-nav-col">
+            <ul class="footer-links">
+              <li><a href="#become-creator" class="footer-link">Become a Creator</a></li>
+              <li><a href="#affiliate" class="footer-link">Affiliate Program</a></li>
+              <li><a href="#contact" class="footer-link">Contact</a></li>
+              <li><a href="#help" class="footer-link">Help</a></li>
+              <li><a href="#about" class="footer-link">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <hr class="footer-divider" />
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p class="footer-copyright">@ 2023 ByteSpace. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="#privacy" class="footer-legal-link">Privacy Policy</a>
+          <a href="#terms" class="footer-legal-link">Terms of Service</a>
+          <a href="#cookies" class="footer-legal-link">Cookies Settings</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
