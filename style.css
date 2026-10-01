@@ -6,14 +6,14 @@
 :root {
   --primary-blue: #003ce2;
   --primary-blue-dark: #0033c4;
-  --accent-lime: #C8F902;
+  --accent-lime: #CBFC01;
   --accent-lime-hover: #d5ff18;
   --text-white: #ffffff;
-  --text-muted: rgba(255, 255, 255, 0.82);
+  --text-muted: rgba(255, 255, 255, 0.85);
   --text-dark: #111827;
   --text-gray: #6B7280;
   --card-bg: #ffffff;
-  --border-radius-card: 16px;
+  --border-radius-card: 14px;
   --border-radius-pill: 9999px;
   --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
@@ -31,9 +31,9 @@ html, body {
   background-color: var(--primary-blue);
   /* Isometric Blueprint Grid Pattern */
   background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
-  background-size: 72px 72px;
+    linear-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+  background-size: 83px 83px;
   background-position: center top;
   color: var(--text-white);
   overflow-x: hidden;
@@ -172,12 +172,11 @@ html, body {
 .hero-section {
   position: relative;
   width: 100%;
-  height: calc(100vh - 82px);
-  min-height: 620px;
+  min-height: calc(100vh - 75px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding-top: 15px;
   padding-bottom: 0;
   overflow: hidden;
@@ -191,7 +190,7 @@ html, body {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 2;
+  z-index: 3;
   overflow: hidden;
 }
 
@@ -199,54 +198,56 @@ html, body {
   position: absolute;
   pointer-events: auto;
   user-select: none;
-  filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.22));
+  filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.18));
   transition: transform 0.3s ease;
 }
 
 .shape:hover {
-  transform: scale(1.06) rotate(3deg);
+  transform: scale(1.05);
 }
 
-/* Individual Shapes Coordinates matching Screenshot */
+/* Individual Shapes Coordinates precisely matching reference */
 .shape-spiral {
-  top: 14%;
-  left: 0%;
-  width: 135px;
+  top: 16%;
+  left: 0;
+  width: 140px;
   animation: float-gentle 6s ease-in-out infinite;
 }
 
 .shape-squiggle-l {
   top: 42%;
-  left: 12%;
-  width: 85px;
+  left: calc(50% - 375px);
+  width: 82px;
   animation: float-reverse 7s ease-in-out infinite;
 }
 
 .shape-torus {
-  bottom: 0%;
-  left: 2%;
-  width: 195px;
+  bottom: 0;
+  left: calc(50% - 485px);
+  width: 205px;
+  z-index: 3;
   animation: float-gentle 8s ease-in-out infinite;
 }
 
 .shape-cylinder {
-  top: 13%;
-  right: 0%;
-  width: 115px;
+  top: 14%;
+  right: 0;
+  width: 125px;
   animation: float-reverse 6.5s ease-in-out infinite;
 }
 
 .shape-pyramid {
   top: 40%;
-  right: 12%;
-  width: 95px;
+  left: calc(50% + 315px);
+  width: 92px;
   animation: float-gentle 7.5s ease-in-out infinite;
 }
 
 .shape-squiggle-r {
-  bottom: 0%;
-  right: 2%;
-  width: 150px;
+  bottom: 0;
+  left: calc(50% + 345px);
+  width: 145px;
+  z-index: 3;
   animation: float-reverse 8.5s ease-in-out infinite;
 }
 
@@ -263,8 +264,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  height: 100%;
-  justify-content: space-between;
+  flex: 1;
 }
 
 .hero-title {
@@ -278,42 +278,47 @@ html, body {
 
 .hero-description {
   font-size: 15px;
-  line-height: 1.55;
+  line-height: 1.5;
   color: var(--text-muted);
-  max-width: 660px;
+  max-width: 850px;
   margin: 0 auto 24px auto;
   font-weight: 400;
 }
 
-/* Search Bar Pill Form */
+/* Search Bar Pill Form matching reference with separate pills */
 .hero-search-box {
   display: flex;
   align-items: center;
-  background-color: var(--card-bg);
-  border-radius: var(--border-radius-pill);
-  padding: 6px 7px 6px 20px;
+  justify-content: center;
+  gap: 13px;
   width: 100%;
-  max-width: 480px;
-  margin-bottom: 24px;
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.16);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.hero-search-box:focus-within {
-  transform: translateY(-2px);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+  max-width: 440px;
+  margin: 0 auto 28px auto;
+  background: transparent;
+  box-shadow: none;
 }
 
 .search-input-group {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  background-color: #ffffff;
+  border-radius: var(--border-radius-pill);
+  padding: 10px 18px;
   flex: 1;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-input-group:focus-within {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .search-icon {
   color: #9CA3AF;
   flex-shrink: 0;
+  width: 16px;
+  height: 16px;
 }
 
 #search-input {
@@ -322,7 +327,7 @@ html, body {
   outline: none;
   background: transparent;
   font-family: inherit;
-  font-size: 15px;
+  font-size: 14px;
   color: var(--text-dark);
 }
 
@@ -339,15 +344,16 @@ html, body {
   font-weight: 700;
   border: none;
   border-radius: var(--border-radius-pill);
-  padding: 11px 26px;
+  padding: 11px 24px;
   cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
 }
 
 .search-btn:hover {
   background-color: var(--accent-lime-hover);
   transform: scale(1.02);
-  box-shadow: 0 4px 12px rgba(200, 249, 2, 0.4);
+  box-shadow: 0 4px 14px rgba(203, 252, 1, 0.4);
 }
 
 .search-btn:active {
@@ -360,7 +366,7 @@ html, body {
 .hero-visual-area {
   position: relative;
   width: 100%;
-  max-width: 680px;
+  max-width: 860px;
   height: 400px;
   margin: 0 auto;
   display: flex;
@@ -380,21 +386,24 @@ html, body {
 /* Giant Green Circle Backdrop */
 .green-arch-backdrop {
   position: absolute;
-  bottom: -40px;
-  width: 580px;
-  height: 420px;
+  bottom: -460px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 820px;
+  height: 820px;
   background-color: var(--accent-lime);
-  border-radius: 50% 50% 0 0;
+  border-radius: 50%;
   z-index: 1;
+  pointer-events: none;
 }
 
 /* Student Character */
 .student-img {
   position: relative;
   z-index: 2;
-  width: 480px;
-  height: auto;
-  max-height: 410px;
+  height: 390px;
+  width: auto;
+  max-width: none;
   object-fit: contain;
   margin-bottom: 0;
   filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.2));
@@ -402,18 +411,18 @@ html, body {
 }
 
 .student-img:hover {
-  transform: translateY(-4px) scale(1.01);
+  transform: translateY(-3px) scale(1.01);
 }
 
 /* ----------------------------------------------------
-   Floating Glass/White Cards
+   Floating Stat Cards
 ------------------------------------------------------- */
 .floating-stat-card {
   position: absolute;
   z-index: 5;
   background: var(--card-bg);
   border-radius: var(--border-radius-card);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
   color: var(--text-dark);
   text-align: left;
   user-select: none;
@@ -421,47 +430,47 @@ html, body {
 }
 
 .floating-stat-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.22);
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.18);
 }
 
 /* 1. UI/UX Design Card */
 .card-uiux {
   top: 95px;
-  left: 20px;
-  padding: 15px 20px;
-  min-width: 175px;
+  right: calc(50% + 75px);
+  padding: 12px 18px;
+  min-width: 142px;
 }
 
 .card-main-title {
   display: block;
-  font-size: 14.5px;
+  font-size: 13.5px;
   font-weight: 700;
   color: var(--text-dark);
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 
 .card-sub-info {
   display: block;
-  font-size: 11.5px;
+  font-size: 10.5px;
   font-weight: 500;
   color: var(--text-gray);
 }
 
 /* 2. Learning Progress Card */
 .card-progress {
-  top: 115px;
-  right: 15px;
-  padding: 16px 20px;
-  width: 195px;
+  top: 85px;
+  left: calc(50% + 85px);
+  padding: 14px 18px;
+  width: 160px;
 }
 
 .card-label-small {
   display: block;
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 600;
   color: var(--text-gray);
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 
 .card-percentage {
@@ -470,13 +479,13 @@ html, body {
   font-weight: 800;
   color: var(--text-dark);
   line-height: 1;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .progress-bar-track {
   width: 100%;
   height: 6px;
-  background-color: #E5E7EB;
+  background-color: #EEF0F4;
   border-radius: 9999px;
   overflow: hidden;
 }
@@ -491,22 +500,22 @@ html, body {
 
 /* 3. Happy Students Card */
 .card-students {
-  bottom: 25px;
-  left: -20px;
-  padding: 13px 18px;
-  min-width: 220px;
+  bottom: 38px;
+  right: calc(50% + 88px);
+  padding: 12px 16px;
+  min-width: 178px;
 }
 
 .card-students-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
-  gap: 12px;
+  margin-bottom: 8px;
+  gap: 10px;
 }
 
 .students-label {
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 700;
   color: var(--text-dark);
 }
@@ -515,7 +524,7 @@ html, body {
   display: flex;
   align-items: center;
   gap: 3px;
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 600;
   color: var(--text-dark);
 }
@@ -526,8 +535,8 @@ html, body {
 }
 
 .rating-star {
-  color: #FBBF24;
-  font-size: 13px;
+  color: #F59E0B;
+  font-size: 12px;
 }
 
 .students-avatar-row {
@@ -536,11 +545,11 @@ html, body {
 }
 
 .student-avatar {
-  width: 32px;
-  height: 32px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
-  border: 2px solid #ffffff;
-  margin-left: -8px;
+  border: 1.5px solid #ffffff;
+  margin-left: -6px;
   object-fit: cover;
   background-color: #e5e7eb;
 }
@@ -550,18 +559,18 @@ html, body {
 }
 
 .avatar-badge-pill {
-  width: 32px;
-  height: 32px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   background-color: var(--accent-lime);
   color: var(--text-dark);
-  font-size: 10.5px;
+  font-size: 9.5px;
   font-weight: 800;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #ffffff;
-  margin-left: -8px;
+  border: 1.5px solid #ffffff;
+  margin-left: -6px;
 }
 
 /* ----------------------------------------------------
